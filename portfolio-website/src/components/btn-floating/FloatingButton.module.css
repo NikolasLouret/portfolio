@@ -1,0 +1,45 @@
+.body {
+	position: fixed;
+	bottom: 5rem;
+	right: 3rem;
+	z-index: 100;
+}
+
+.body > span {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	cursor: pointer;
+	transition: transform 1s ease;
+}
+
+.body > span > a {
+	width: 1.7rem;
+	height: 1.7rem;
+}
+
+.email {
+	background-color: var(--red);
+}
+
+.whatsapp {
+	background-color: var(--green);
+}
+
+/* phones */
+@media (max-width: 40em) {
+	.body {
+		bottom: 2rem;
+		right: 1rem;
+	}
+	.body > span {
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 100%;
+	}
+
+	.body > span a,
+	.body > span svg {
+		width: 1.5rem;
+	}
+}
