@@ -1,0 +1,21 @@
+.subtitle {
+	color: var(--light-gray-text);
+}
+
+.projects {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+	grid-auto-rows: auto;
+	grid-gap: 2rem;
+}
+
+.load_more {
+	cursor: pointer;
+}
+
+@media (min-width: 40em) {
+	.projects {
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	}
+}
