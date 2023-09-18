@@ -1,0 +1,19 @@
+.body {
+	row-gap: 2rem;
+}
+
+.subtitle {
+	color: var(--light-gray-text);
+}
+
+.description {
+	color: var(--dark-gray-text);
+	max-width: 45rem;
+	font-size: 1.1rem;
+}
+
+@media (max-width: 390px) {
+	.description {
+		font-size: 0.9rem;
+	}
+}
