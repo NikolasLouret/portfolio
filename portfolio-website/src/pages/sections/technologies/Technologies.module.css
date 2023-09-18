@@ -1,0 +1,35 @@
+.tech {
+	mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 15%, #000 85%, rgba(0, 0, 0, 0) 100%);
+	-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 15%, #000 85%, rgba(0, 0, 0, 0) 100%);
+}
+
+.list_tech {
+	column-gap: 4rem;
+}
+.list_tech li {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.list_tech li:last-child {
+	padding-right: 4rem;
+}
+
+.list_tech li img {
+	height: 2.5rem;
+}
+
+.list_tech li img svg {
+	fill: #000;
+}
+
+@media (max-width: 1000px) {
+	.list_tech {
+		column-gap: 2rem;
+	}
+
+	.list_tech li img {
+		height: 2rem;
+	}
+}
