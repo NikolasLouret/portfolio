@@ -1,0 +1,141 @@
+.body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 15px;
+	transition: transform 0.3s ease;
+}
+
+.chevron_right {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	transition: all 0.3s ease;
+	z-index: 2;
+}
+
+.img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 15px;
+	z-index: -1;
+	transition: filter 0.3s ease;
+}
+
+.content {
+	padding: 1rem 1.5rem 2rem;
+	height: 100%;
+	border-radius: 15px;
+	justify-content: flex-start;
+	transition: all 0.3s ease;
+	row-gap: 1.5rem;
+}
+
+.year,
+.name,
+.description,
+.technology {
+	color: var(--white);
+}
+
+.infos {
+	row-gap: 4rem;
+}
+
+.title {
+	margin-top: 2rem;
+}
+
+.technology {
+	padding: 0.1rem 0.7rem;
+	border-radius: 5rem;
+	background-color: var(--dark-gray);
+}
+
+.technologies {
+	flex-wrap: wrap;
+	gap: 1rem;
+	transition: all 0.3s ease;
+}
+
+/* tablets */
+@media (max-width: 64em) {
+	.chevron_right {
+		opacity: 1;
+		transition: none;
+	}
+
+	.content {
+		margin-top: 0;
+		transition: none;
+	}
+
+	.img {
+		transition: none;
+		filter: brightness(0.4);
+	}
+}
+
+/* phones */
+@media (max-width: 40em) {
+	.technologies {
+		margin-top: 3rem;
+		gap: 0.5rem;
+	}
+}
+
+/* Galaxy Fold */
+@media (max-width: 330px) {
+	.technology {
+		font-size: 0.8rem;
+	}
+}
+
+/* laptops and desktop */
+@media (min-width: 64em) {
+	.chevron_right {
+		right: 2rem;
+	}
+
+	.body .content,
+	.body .chevron_right,
+	.body .technologies {
+		opacity: 0;
+	}
+
+	.body:hover {
+		transform: translateY(-20px);
+	}
+	.body:hover .content,
+	.body:hover .technologies {
+		opacity: 1;
+		animation: slidein 0.3s ease;
+	}
+
+	.body:hover .chevron_right {
+		opacity: 1;
+		transform: translateX(1rem);
+	}
+
+	.body:hover .img {
+		filter: brightness(0.4);
+	}
+}
+
+/* animations */
+@keyframes slidein {
+	from {
+		transform: translateY(2rem);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
