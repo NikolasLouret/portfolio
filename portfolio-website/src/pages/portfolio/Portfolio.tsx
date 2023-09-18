@@ -8,7 +8,6 @@ import { useEffect } from 'react'
 import Header from '../../components/header/Header'
 import Presentation from '../sections/presentation/Presentation'
 import AboutMe from '../sections/about-me/AboutMe'
-import ParallaxText from '../../components/parallax/ParallaxText'
 import Projects from '../sections/projects/Projects'
 import Footer from '../../components/footer/Footer'
 import FloatingButton from '../../components/btn-floating/FloatingButton'
@@ -22,12 +21,15 @@ const Portfolio = () => {
 	}, [])
 
 	return (
-		<>
+		<div className={styles.body}>
 			<Header />
-			<div className={styles.mask_text}>
-				<ParallaxText baseVelocity={-0.2}>
-					<span className={styles.animated_text}>DESENVOLVIMENTO DE SOFTWARE</span>
-				</ParallaxText>
+			<div className={`flex ${styles.mask_text}`}>
+				<span className={styles.animated_text}>DESENVOLVIMENTO DE SOFTWARE</span>
+				<span className={styles.animated_text}>DESENVOLVIMENTO DE SOFTWARE</span>
+			</div>
+
+			<div className={styles.divImg}>
+				<img className={styles.me} src='/imgs/photo.png' alt='Me' />
 			</div>
 
 			<div className={`flex flex-column ${styles.container}`}>
@@ -44,7 +46,7 @@ const Portfolio = () => {
 			</div>
 
 			<FloatingButton />
-		</>
+		</div>
 	)
 }
 

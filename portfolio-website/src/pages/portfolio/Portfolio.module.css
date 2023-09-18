@@ -1,3 +1,7 @@
+.body {
+	overflow-x: hidden;
+	position: relative;
+}
 .mask_text {
 	mask-image: linear-gradient(
 		90deg,
@@ -13,6 +17,7 @@
 		rgba(255, 255, 255, 1) 90%,
 		rgba(255, 255, 255, 0) 100%
 	);
+	column-gap: 4rem;
 }
 
 .animated_text {
@@ -21,10 +26,25 @@
 	font-weight: 800;
 	color: var(--white);
 	text-shadow: 20px 20px 60px #eeeeee, -20px -20px 60px var(--white);
+	white-space: nowrap;
+	animation: loop 90s linear infinite;
+	-webkit-animation: loop 90s linear infinite;
+	-moz-animation: loop 90s linear infinite;
+	-o-animation: loop 90s linear infinite;
 }
 
 .container {
 	row-gap: 9rem;
+}
+
+.divImg {
+	position: absolute;
+	top: 5rem;
+	right: 15rem;
+}
+.me {
+	width: 50rem;
+	object-fit: cover;
 }
 
 /* laptops and desktop */
@@ -34,11 +54,38 @@
 	}
 }
 
+@media (max-width: 1600px) {
+	.divImg {
+		right: 10rem;
+	}
+	.me {
+		width: 45rem;
+	}
+}
+@media (max-width: 1300px) {
+	.divImg {
+		top: 7rem;
+		right: 10rem;
+	}
+	.me {
+		width: 40rem;
+	}
+}
+
 /* tablets */
-@media (max-width: 64em) {
+@media (max-width: 66em) {
 	.animated_text {
 		font-size: 23rem;
 		text-shadow: 20px 20px 60px #eeeeee, -20px -20px 60px var(--white);
+	}
+
+	.divImg {
+		top: 15rem;
+		right: 5rem;
+	}
+
+	.me {
+		width: 35rem;
 	}
 
 	.container {
@@ -48,14 +95,32 @@
 
 /* phones */
 @media (max-width: 40rem) {
+	.divImg {
+		top: 4rem;
+		right: -5rem;
+	}
+	.me {
+		width: 25rem;
+	}
+
 	.animated_text {
 		font-size: 17rem;
 		line-height: 16rem;
 		text-shadow: 10px 10px 20px #eeeeee, -10px -10px 20px var(--white);
+		white-space: nowrap;
 	}
 
 	.container {
 		padding: 0 2rem;
 		row-gap: 3rem;
+	}
+}
+
+@keyframes loop {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
 	}
 }

@@ -5,15 +5,18 @@
 
 .list_tech {
 	column-gap: 4rem;
+	animation: loop 15s linear infinite;
+	-webkit-animation: loop 15s linear infinite;
+	-moz-animation: loop 15s linear infinite;
+	-o-animation: loop 15s linear infinite;
 }
 .list_tech li {
 	list-style: none;
 	display: flex;
 	align-items: center;
 }
-
 .list_tech li:last-child {
-	padding-right: 4rem;
+	margin-right: 4rem;
 }
 
 .list_tech li img {
@@ -31,5 +34,14 @@
 
 	.list_tech li img {
 		height: 2rem;
+	}
+}
+
+@keyframes loop {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0%);
 	}
 }
