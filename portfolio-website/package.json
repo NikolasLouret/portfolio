@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@motionone/utils": "^10.15.1",
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-responsive": "^9.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
