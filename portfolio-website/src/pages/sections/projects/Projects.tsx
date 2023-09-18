@@ -66,7 +66,7 @@ const data_mock: IProjectCardProps[] = [
 ]
 
 const Projects = (prop: { id: string }) => {
-	const url_repos = 'http://api.github.com/users/nikolaslouret/repos'
+	const url_repos = 'https://api.github.com/users/nikolaslouret/repos'
 	const [projects, setProjects] = useState<IProjectCardProps[]>([])
 	const [allProjects, setAllProjects] = useState<IProjectCardProps[]>([])
 	const [page, setPage] = useState(0)
