@@ -155,7 +155,7 @@ const Projects = (prop: { id: string }) => {
 
 			<div className={styles.projects}>
 				{projects.map((project, index) => (
-					<FadeInSection key={'2345'} direction='up'>
+					<FadeInSection key={index + '2345'} direction='up'>
 						<ProjectCard
 							key={index}
 							id={project.id}
