@@ -1,12 +1,15 @@
 .header {
-	position: sticky;
+	position: fixed;
 	padding: 1rem 15rem;
-	top: 0px;
 	z-index: 101;
 	background-color: var(--white);
 	transition: all 0.2s ease;
+	width: 100%;
 }
 
+.header.up {
+	top: 0;
+}
 .header.down {
 	top: -6rem;
 }
