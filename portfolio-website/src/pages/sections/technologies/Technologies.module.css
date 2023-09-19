@@ -33,6 +33,9 @@
 }
 
 @media (max-width: 1000px) {
+	.tech_title {
+		margin-bottom: 1rem;
+	}
 	.list_tech {
 		column-gap: 2rem;
 	}
