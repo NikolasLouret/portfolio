@@ -85,12 +85,11 @@ const Projects = (prop: { id: string }) => {
 
 					setAllProjects(repos)
 					setProjects(repos.slice(page * 6, page * 6 + 6))
-
-					setPage(page + 1)
 				} else {
 					setAllProjects(data_mock)
 					setProjects(data_mock.slice(page * 6, page * 6 + 6))
 				}
+				setPage(page + 1)
 			} catch (error) {
 				console.error(error)
 				setAllProjects(data_mock)
@@ -138,15 +137,15 @@ const Projects = (prop: { id: string }) => {
 	}
 
 	const handleLoadMore = () => {
-		projects.concat(allProjects.slice(page * 6, page * 6 + 6))
-		console.log(allProjects.slice(page * 6, page * 6 + 6))
-		setProjects(projects)
+		const addMoreProjects = projects.concat(allProjects.slice(page * 6, page * 6 + 6))
+
+		setProjects(addMoreProjects)
 		setPage(page + 1)
 	}
 
 	return (
 		<section id={prop.id} className={`flex flex-column ${styles.body}`}>
-			<FadeInSection key={'12345'} direction='right'>
+			<FadeInSection key={'12345'} direction='left'>
 				<div className={styles.title}>
 					<span className={styles.subtitle}>Meus</span>
 					<h2 className={styles.about_me}>PROJETOS</h2>
@@ -170,9 +169,11 @@ const Projects = (prop: { id: string }) => {
 				))}
 			</div>
 
-			{allProjects.length > 6 && (
+			{allProjects.length > page * 6 && (
 				<span className={styles.load_more} onClick={handleLoadMore}>
-					Carregar mais projetos
+					<FadeInSection key={'999'} direction='right'>
+						Carregar mais projetos
+					</FadeInSection>
 				</span>
 			)}
 		</section>

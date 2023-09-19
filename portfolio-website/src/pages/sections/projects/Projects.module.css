@@ -11,6 +11,8 @@
 }
 
 .load_more {
+	margin-top: 2rem;
+	text-align: right;
 	cursor: pointer;
 }
 
