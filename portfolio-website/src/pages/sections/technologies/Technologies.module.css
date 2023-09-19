@@ -36,8 +36,12 @@
 	.tech_title {
 		margin-bottom: 1rem;
 	}
+
 	.list_tech {
 		column-gap: 2rem;
+	}
+	.list_tech li:last-child {
+		margin-right: 2rem;
 	}
 
 	.list_tech li img {

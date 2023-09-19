@@ -40,7 +40,7 @@
 .name,
 .description,
 .technology {
-	color: var(--white);
+	color: var(--white) !important;
 }
 
 .infos {
