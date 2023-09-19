@@ -24,7 +24,7 @@
 
 .description {
 	font-size: 1.1rem;
-	color: var(--light-gray-text);
+	color: var(--dark-gray-text);
 }
 
 .button {
@@ -45,6 +45,7 @@
 	row-gap: 0.5rem;
 }
 
+/* phones and tablets */
 @media (max-width: 64em) {
 	.body {
 		row-gap: 3rem;
@@ -64,6 +65,12 @@
 
 	.infos {
 		margin-top: 2.5rem;
+	}
+}
+
+@media (max-width: 40em) {
+	.body {
+		margin-top: 1rem;
 	}
 }
 
