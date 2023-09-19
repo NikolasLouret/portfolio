@@ -2,7 +2,7 @@
 import styles from './Portfolio.module.css'
 
 //* React
-import { useEffect } from 'react'
+import { useEffect, useContext } from 'react'
 
 //* Components
 import Header from '../../components/header/Header'
@@ -13,7 +13,12 @@ import Footer from '../../components/footer/Footer'
 import FloatingButton from '../../components/btn-floating/FloatingButton'
 import FadeInSection from '../../components/fadein-section/FadeInSection'
 
+//* Context
+import { ThemeContext } from '../../context/ThemeContext'
+
 const Portfolio = () => {
+	const { theme } = useContext(ThemeContext)
+
 	useEffect(() => {
 		window.onbeforeunload = function () {
 			window.scrollTo(0, 0)
@@ -21,7 +26,7 @@ const Portfolio = () => {
 	}, [])
 
 	return (
-		<div className={styles.body}>
+		<div className={`${styles[theme]} ${styles.body}`}>
 			<Header />
 			<div className={`flex ${styles.mask_text}`}>
 				<span className={styles.animated_text}>DESENVOLVEDOR DE SOFTWARE</span>

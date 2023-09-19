@@ -1,0 +1,30 @@
+/* darkmode */
+.dark {
+	background-color: var(--darkmode-background);
+}
+.dark span,
+.dark a,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark p,
+.dark b,
+.dark path {
+	color: var(--white);
+	fill: var(--white);
+}
+
+/* lightmode */
+.light {
+	background-color: var(--white);
+}
+.light span,
+.light a,
+.light h1,
+.light h2,
+.light h3,
+.light p,
+.light b,
+.light path {
+	color: black;
+}

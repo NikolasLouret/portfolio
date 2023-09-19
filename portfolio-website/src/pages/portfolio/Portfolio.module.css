@@ -23,9 +23,9 @@
 	font-size: 19rem;
 	font-weight: 800;
 	padding-left: 5rem;
+	white-space: nowrap;
 	color: var(--white);
 	text-shadow: 20px 20px 60px #e2e2e2, -20px -20px 60px var(--white);
-	white-space: nowrap;
 	animation: loop 90s linear infinite;
 	-webkit-animation: loop 90s linear infinite;
 	-moz-animation: loop 90s linear infinite;
@@ -126,10 +126,15 @@
 	}
 }
 
+/* lightmode */
+
+.light .animated_text {
+	color: var(--white);
+}
+
 /* darkmode */
-@media (prefers-color-scheme: dark) {
-	.animated_text {
-		color: var(--dark-gray-text);
-		text-shadow: 10px 10px 50px black;
-	}
+
+.dark .animated_text {
+	color: var(--dark-gray-text);
+	text-shadow: 10px 10px 50px black;
 }
