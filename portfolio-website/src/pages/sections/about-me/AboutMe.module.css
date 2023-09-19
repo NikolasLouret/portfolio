@@ -5,8 +5,10 @@
 .subtitle {
 	color: var(--light-gray-text) !important;
 }
-
 .description {
+	row-gap: 1.5rem;
+}
+.description p {
 	color: var(--dark-gray-text) !important;
 	max-width: 45rem;
 	font-size: 1.1rem;
