@@ -5,15 +5,23 @@ import styles from './Header.module.css'
 import { useMediaQuery } from 'react-responsive'
 
 //* React
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, FC, useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 
 //* Icons
 import { IoMenuOutline } from 'react-icons/io5'
 
-const Header = () => {
+const Header: FC = () => {
+	const { theme, setTheme } = useContext(ThemeContext)
 	const isDesktop = useMediaQuery({ minWidth: 1200 })
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const menuRef = useRef<HTMLHtmlElement | null>(null)
+
+	const handleThemeChange = () => {
+		const isCurrentDark = theme === 'dark'
+		setTheme(isCurrentDark ? 'light' : 'dark')
+		localStorage.setItem('theme', isCurrentDark ? 'light' : 'dark')
+	}
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen)
@@ -72,9 +80,14 @@ const Header = () => {
 	const scrollDirection = useScrollDirection()
 
 	return (
-		<div className={`flex justify-between align-center ${styles.header} ${styles[scrollDirection]}`}>
+		<div
+			className={`flex justify-between align-center ${styles.header} ${styles[scrollDirection]} ${styles[theme]}`}>
 			<div className={`flex justify-between align-center ${styles.gap_login}`}>
-				<img className={styles.logo_icon} src='/icons/my-logo.svg' alt='logo' />
+				<img
+					className={styles.logo_icon}
+					src={theme === 'dark' ? '/icons/logo_darkmode.svg' : '/icons/my-logo.svg'}
+					alt='logo'
+				/>
 
 				<div className='flex flex-column align-center'>
 					<span className={styles.name}>Nikolas Louret</span>
@@ -91,6 +104,21 @@ const Header = () => {
 						<li>
 							<a href='#about-me'>Sobre mim</a>
 						</li>
+						<li>
+							<div className={`toggle-checkbox`}>
+								<input
+									type='checkbox'
+									name='checkbox'
+									onChange={handleThemeChange}
+									checked={theme === 'light'}
+									id='checkbox'
+									className={styles.toggle_checkbox}
+								/>
+								<label htmlFor='checkbox' className={styles.switch}>
+									<span className={styles.slider}></span>
+								</label>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			) : (
@@ -100,7 +128,22 @@ const Header = () => {
 					</button>
 
 					{isMenuOpen && (
-						<ul className={styles.menu_list}>
+						<ul className={`flex flex-column ${styles.menu_list}`}>
+							<li>
+								<div className={`flex ${styles.div_checkbox}`}>
+									<input
+										type='checkbox'
+										name='checkbox'
+										onChange={handleThemeChange}
+										checked={theme === 'light'}
+										id='checkbox'
+										className={styles.toggle_checkbox}
+									/>
+									<label htmlFor='checkbox' className={styles.switch}>
+										<span className={styles.slider}></span>
+									</label>
+								</div>
+							</li>
 							<li onClick={handleLinkClick}>
 								<a href='#projects'>Projetos</a>
 							</li>
