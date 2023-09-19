@@ -17,15 +17,14 @@
 		rgba(255, 255, 255, 1) 90%,
 		rgba(255, 255, 255, 0) 100%
 	);
-	column-gap: 4rem;
 }
 
 .animated_text {
 	font-size: 19rem;
-	padding-right: 5rem;
 	font-weight: 800;
+	padding-left: 5rem;
 	color: var(--white);
-	text-shadow: 20px 20px 60px #eeeeee, -20px -20px 60px var(--white);
+	text-shadow: 20px 20px 60px #e2e2e2, -20px -20px 60px var(--white);
 	white-space: nowrap;
 	animation: loop 90s linear infinite;
 	-webkit-animation: loop 90s linear infinite;
@@ -43,7 +42,7 @@
 	right: 15rem;
 }
 .me {
-	width: 50rem;
+	width: 47rem;
 	object-fit: cover;
 }
 
@@ -76,16 +75,16 @@
 @media (max-width: 66em) {
 	.animated_text {
 		font-size: 23rem;
-		text-shadow: 20px 20px 60px #eeeeee, -20px -20px 60px var(--white);
+		text-shadow: 20px 20px 60px #e2e2e2, -20px -20px 60px var(--white);
 	}
 
 	.divImg {
-		top: 15rem;
-		right: 5rem;
+		top: 10rem;
+		right: 3rem;
 	}
 
 	.me {
-		width: 35rem;
+		width: 40rem;
 	}
 
 	.container {
@@ -96,17 +95,18 @@
 /* phones */
 @media (max-width: 40rem) {
 	.divImg {
-		top: 4rem;
+		top: 5rem;
 		right: -5rem;
 	}
 	.me {
-		width: 25rem;
+		width: 27rem;
 	}
 
 	.animated_text {
+		margin-top: 3rem;
 		font-size: 17rem;
 		line-height: 16rem;
-		text-shadow: 10px 10px 20px #eeeeee, -10px -10px 20px var(--white);
+		text-shadow: 10px 10px 20px #e2e2e2, -10px -10px 20px var(--white);
 		white-space: nowrap;
 	}
 

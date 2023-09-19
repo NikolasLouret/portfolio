@@ -24,8 +24,8 @@ const Portfolio = () => {
 		<div className={styles.body}>
 			<Header />
 			<div className={`flex ${styles.mask_text}`}>
-				<span className={styles.animated_text}>DESENVOLVIMENTO DE SOFTWARE</span>
-				<span className={styles.animated_text}>DESENVOLVIMENTO DE SOFTWARE</span>
+				<span className={styles.animated_text}>DESENVOLVEDOR DE SOFTWARE</span>
+				<span className={styles.animated_text}>DESENVOLVEDOR DE SOFTWARE</span>
 			</div>
 
 			<div className={styles.divImg}>
