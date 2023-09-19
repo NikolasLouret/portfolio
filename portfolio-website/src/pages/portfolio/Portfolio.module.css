@@ -116,11 +116,20 @@
 	}
 }
 
+/* animations */
 @keyframes loop {
 	from {
 		transform: translateX(0%);
 	}
 	to {
 		transform: translateX(-100%);
+	}
+}
+
+/* darkmode */
+@media (prefers-color-scheme: dark) {
+	.animated_text {
+		color: var(--dark-gray-text);
+		text-shadow: 10px 10px 50px black;
 	}
 }
