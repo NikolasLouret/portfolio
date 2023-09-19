@@ -33,13 +33,11 @@ const Portfolio = () => {
 			</div>
 
 			<div className={`flex flex-column ${styles.container}`}>
-				<FadeInSection key={'123'} direction='right'>
+				<FadeInSection key={'123'} direction='left'>
 					<Presentation />
 				</FadeInSection>
 
-				<FadeInSection key={'1234'} direction='up'>
-					<AboutMe id='about-me' />
-				</FadeInSection>
+				<AboutMe id='about-me' />
 
 				<Projects id='projects' />
 				<Footer />

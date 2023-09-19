@@ -10,6 +10,10 @@
 }
 
 .right {
+	transform: translateX(5rem);
+}
+
+.left {
 	transform: translateX(-5rem);
 }
 
