@@ -35,9 +35,11 @@ const Presentation = () => {
 						a satisfação do cliente.
 					</p>
 
-					<button type='button' className={styles.button}>
-						Ver projetos
-					</button>
+					<a href='#projects'>
+						<button type='button' className={styles.button}>
+							Ver projetos
+						</button>
+					</a>
 				</div>
 			</div>
 
