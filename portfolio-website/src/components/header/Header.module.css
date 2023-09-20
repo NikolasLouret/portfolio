@@ -68,6 +68,8 @@
 	content: '🌙';
 	font-size: 1rem;
 	position: absolute;
+	top: 50%;
+	left: 50%;
 }
 
 .toggle_checkbox:checked ~ .switch {

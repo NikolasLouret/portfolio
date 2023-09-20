@@ -135,6 +135,6 @@
 /* darkmode */
 
 .dark .animated_text {
-	color: var(--dark-gray-text);
-	text-shadow: 10px 10px 50px black;
+	color: #1d1d1d;
+	text-shadow: none;
 }

@@ -58,7 +58,6 @@ const Header: FC = () => {
 			const updateScrollDirection = () => {
 				const scrollY: number = window.scrollY
 				const direction: string = scrollY > lastScrollY ? 'down' : 'up'
-				console.log(scrollY, lastScrollY)
 
 				if (direction !== scrollDirection) {
 					setScrollDirection(direction)
