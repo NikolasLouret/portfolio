@@ -66,6 +66,7 @@
 }
 .slider::before {
 	content: '🌙';
+	font-size: 1rem;
 	position: absolute;
 }
 
@@ -78,6 +79,7 @@
 }
 .toggle_checkbox:checked ~ .switch .slider::before {
 	content: '☼';
+	font-size: 1rem;
 	color: var(--white);
 	left: 2px;
 }
