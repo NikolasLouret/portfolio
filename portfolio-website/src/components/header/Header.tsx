@@ -13,8 +13,8 @@ import { IoMenuOutline } from 'react-icons/io5'
 
 const Header: FC = () => {
 	const { theme, setTheme } = useContext(ThemeContext)
-	const isDesktop = useMediaQuery({ minWidth: 1200 })
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const isDesktop = useMediaQuery({ minWidth: 1200 })
 	const menuRef = useRef<HTMLHtmlElement | null>(null)
 
 	const handleThemeChange = () => {

@@ -11,8 +11,8 @@
 	height: 0.1rem;
 	background-color: var(--light-gray);
 	border-radius: 5rem;
-	mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 15%, #000 85%, rgba(0, 0, 0, 0) 100%);
-	-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 15%, #000 85%, rgba(0, 0, 0, 0) 100%);
+	mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 30%, #000 85%, rgba(0, 0, 0, 0) 100%);
+	-webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0, #000 30%, #000 85%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contact {
@@ -27,9 +27,9 @@
 	width: 3rem;
 }
 
-.text,
-.heart {
-	color: var(--light-gray);
+.light .text,
+.light .heart {
+	color: var(--light-gray-text);
 }
 
 @media (max-width: 40em) {

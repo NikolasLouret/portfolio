@@ -4,7 +4,13 @@ import styles from './Footer.module.css'
 //* Icons
 import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs'
 
+//* React
+import { useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
+
 const Footer = () => {
+	const { theme } = useContext(ThemeContext)
+
 	return (
 		<div className={`flex flex-column row-gap-3rem ${styles.footer}`}>
 			<div className={styles.line}></div>
@@ -61,7 +67,7 @@ const Footer = () => {
 				</div>
 			</div>
 
-			<div className={`flex column-gap-1rem ${styles.copyright}`}>
+			<div className={`flex column-gap-1rem ${styles[theme]}`}>
 				<img className={styles.footer_logo} src='/icons/my-logo_light-gray.svg' alt='Nikolas Louret' />
 
 				<div className={`flex flex-column ${styles.text}`}>
