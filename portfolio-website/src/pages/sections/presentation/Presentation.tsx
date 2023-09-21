@@ -12,10 +12,10 @@ const Presentation = () => {
 		<div className={`flex flex-column ${styles.body}`}>
 			<div className={styles.presentation}>
 				<div className={`flex flex-column ${styles.contact}`}>
-					<a href='https://www.linkedin.com/in/nikolaslouret/' target='_blank'>
+					<a href='https://www.linkedin.com/in/nikolaslouret/' target='_blank' aria-label='LinkedIn'>
 						<BsLinkedin size='1.2rem' fill='#939393' />
 					</a>
-					<a href='https://github.com/NikolasLouret' target='_blank'>
+					<a href='https://github.com/NikolasLouret' target='_blank' aria-label='Git Hub'>
 						<BsGithub size='1.2rem' fill='#939393' />
 					</a>
 				</div>
@@ -36,7 +36,7 @@ const Presentation = () => {
 					</p>
 
 					<a href='#projects'>
-						<button type='button' className={styles.button}>
+						<button type='button' className={styles.button} aria-label='Ver Projetos'>
 							Ver projetos
 						</button>
 					</a>

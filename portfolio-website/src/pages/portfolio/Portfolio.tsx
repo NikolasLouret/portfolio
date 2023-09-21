@@ -2,16 +2,16 @@
 import styles from './Portfolio.module.css'
 
 //* React
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, lazy } from 'react'
 
 //* Components
-import Header from '../../components/header/Header'
-import Presentation from '../sections/presentation/Presentation'
-import AboutMe from '../sections/about-me/AboutMe'
-import Projects from '../sections/projects/Projects'
-import Footer from '../../components/footer/Footer'
-import FloatingButton from '../../components/btn-floating/FloatingButton'
-import FadeInSection from '../../components/fadein-section/FadeInSection'
+const FadeInSection = lazy(() => import('../../components/fadein-section/FadeInSection'))
+const Presentation = lazy(() => import('../sections/presentation/Presentation'))
+const AboutMe = lazy(() => import('../sections/about-me/AboutMe'))
+const Header = lazy(() => import('../../components/header/Header'))
+const Projects = lazy(() => import('../sections/projects/Projects'))
+const Footer = lazy(() => import('../../components/footer/Footer'))
+const FloatingButton = lazy(() => import('../../components/btn-floating/FloatingButton'))
 
 //* Context
 import { ThemeContext } from '../../context/ThemeContext'
@@ -34,7 +34,7 @@ const Portfolio = () => {
 			</div>
 
 			<div className={styles.divImg}>
-				<img className={styles.me} src='/imgs/photo.png' alt='Me' />
+				<img className={styles.me} src='/imgs/photo.webp' alt='Me' />
 			</div>
 
 			<div className={`flex flex-column ${styles.container}`}>

@@ -1,0 +1,47 @@
+[
+	{
+		"id": 407210763,
+		"name": "DIW-Trabalhos",
+		"year": 2021,
+		"description": "Repositório destinado à armazenar os projetos referentes ao trabalhos das disciplinas do curso de Eng. de Software da PUC Minas - Praça da Liberdade",
+		"topics": ["css3", "html5", "javascript"],
+		"img": "/imgs/placeholder.webp",
+		"httpRepo": "https://github.com/NikolasLouret/DIW-Trabalhos"
+	},
+	{
+		"id": 438043685,
+		"name": "Klug",
+		"year": 2021,
+		"description": "Aplicação desenvolvida para a disciplina de 'Trabalho Interdisciplinar: Aplicações Web', com propósito de estudo.",
+		"topics": [],
+		"img": "/imgs/capa_klug.webp",
+		"httpRepo": "https://github.com/NikolasLouret/Klug"
+	},
+	{
+		"id": 662229083,
+		"name": "ProtOn-Odontologia",
+		"year": 2023,
+		"description": "Repositório de desenvolvimento do ProtOn Odontologia, um sistema de recomendações de protocolos odontológicos em ReactJs, NodeJs e MongoDB Atlas",
+		"topics": ["css3", "html5", "javascript", "mongodb-atlas", "nodejs", "reactjs"],
+		"img": "/imgs/capa_proton.webp",
+		"httpRepo": "https://github.com/NikolasLouret/ProtOn-Odontologia"
+	},
+	{
+		"id": 617218185,
+		"name": "todosimple-api",
+		"year": 2023,
+		"description": "Aplicação de Spring Boot desenvolvida para fins de aprendizado do curso de RESTful API com Spring Boot do Lucas Ângelo (Eng. de Software PUC Minas Praça da Liberdade)",
+		"topics": ["java"],
+		"img": "/imgs/placeholder.webp",
+		"httpRepo": "https://github.com/NikolasLouret/todosimple-api"
+	},
+	{
+		"id": 645022704,
+		"name": "trabalho-caixeiro-viajente",
+		"year": 2023,
+		"description": "Resolução do problema do Caixeiro Viajante em um grafo utilizando algoritmo de Foça Bruta e o algortimo Guloso",
+		"topics": ["java"],
+		"img": "/imgs/placeholder.webp",
+		"httpRepo": "https://github.com/NikolasLouret/trabalho-caixeiro-viajente"
+	}
+]

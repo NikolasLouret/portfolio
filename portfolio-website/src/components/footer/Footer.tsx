@@ -41,19 +41,19 @@ const Footer = () => {
 
 					<ul className={`flex column-gap-1rem ${styles.social_icons}`}>
 						<li className={styles.social_icon}>
-							<a href='https://www.linkedin.com/in/nikolaslouret/' target='_blank'>
+							<a href='https://www.linkedin.com/in/nikolaslouret/' target='_blank' aria-label='LinkedIn'>
 								<BsLinkedin size='1.2rem' fill='#939393' />
 							</a>
 						</li>
 
 						<li className={styles.social_icon}>
-							<a href='https://github.com/NikolasLouret' target='_blank'>
+							<a href='https://github.com/NikolasLouret' target='_blank' aria-label='Git Hub'>
 								<BsGithub size='1.2rem' fill='#939393' />
 							</a>
 						</li>
 
 						<li className={styles.social_icon}>
-							<a href='https://www.instagram.com/nikolas_louret/' target='_blank'>
+							<a href='https://www.instagram.com/nikolas_louret/' target='_blank' aria-label='Instagram'>
 								<BsInstagram size='1.2rem' fill='#939393' />
 							</a>
 						</li>

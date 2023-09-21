@@ -4,7 +4,7 @@ import styles from './Technologies.module.css'
 const Technologies = () => {
 	return (
 		<div className={styles.tech}>
-			<h3 className={styles.tech_title}>Tecnologias</h3>
+			<h1 className={styles.tech_title}>Tecnologias</h1>
 
 			<div className={`flex justify_between ${styles.technologies}`}>
 				<ul className={`flex justify_between ${styles.list_tech}`}>

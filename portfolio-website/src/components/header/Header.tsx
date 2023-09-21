@@ -99,10 +99,14 @@ const Header: FC = () => {
 				<nav className={`flex justify-between align-center ${styles.menu}`}>
 					<ul className={`flex justify-between align-center column-gap-3rem ${styles.items}`}>
 						<li>
-							<a href='#projects'>Projetos</a>
+							<a href='#projects' aria-label='Projetos'>
+								Projetos
+							</a>
 						</li>
 						<li>
-							<a href='#about-me'>Sobre mim</a>
+							<a href='#about-me' aria-label='Sobre Mim'>
+								Sobre mim
+							</a>
 						</li>
 						<li>
 							<div className={`toggle-checkbox`}>
@@ -123,7 +127,7 @@ const Header: FC = () => {
 				</nav>
 			) : (
 				<nav ref={menuRef} className={`flex justify-between align-center ${styles.menu}`}>
-					<button type='button' className={styles.menu_btn} onClick={toggleMenu}>
+					<button type='button' className={styles.menu_btn} onClick={toggleMenu} aria-label='Menu'>
 						<IoMenuOutline size='1.7rem' />
 					</button>
 
@@ -145,10 +149,14 @@ const Header: FC = () => {
 								</div>
 							</li>
 							<li onClick={handleLinkClick}>
-								<a href='#projects'>Projetos</a>
+								<a href='#projects' aria-label='Projetos'>
+									Projetos
+								</a>
 							</li>
 							<li onClick={handleLinkClick}>
-								<a href='#about-me'>Sobre mim</a>
+								<a href='#about-me' aria-label='Sobre Mim'>
+									Sobre mim
+								</a>
 							</li>
 						</ul>
 					)}

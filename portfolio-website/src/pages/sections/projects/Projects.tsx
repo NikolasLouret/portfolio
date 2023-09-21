@@ -11,59 +11,9 @@ import ProjectCard from '../../../components/projectCard/ProjectCard'
 import { IProjectCardProps } from '../../../types/IProjectCardProps'
 import { IRepoProps } from '../../../types/IRepoProps'
 import FadeInSection from '../../../components/fadein-section/FadeInSection'
+import mock from '../../../components/mock/projects_mock.json'
 
-const data_mock: IProjectCardProps[] = [
-	{
-		id: 407210763,
-		name: 'DIW-Trabalhos',
-		year: 2021,
-		description:
-			'Repositório destinado à armazenar os projetos referentes ao trabalhos das disciplinas do curso de Eng. de Software da PUC Minas - Praça da Liberdade',
-		topics: ['css3', 'html5', 'javascript'],
-		img: '/imgs/placeholder.png',
-		httpRepo: 'https://github.com/NikolasLouret/DIW-Trabalhos',
-	},
-	{
-		id: 438043685,
-		name: 'Klug',
-		year: 2021,
-		description:
-			'Aplicação desenvolvida para a disciplina de "Trabalho Interdisciplinar: Aplicações Web", com propósito de estudo.',
-		topics: [],
-		img: '/imgs/capa_klug.jpg',
-		httpRepo: 'https://github.com/NikolasLouret/Klug',
-	},
-	{
-		id: 662229083,
-		name: 'ProtOn-Odontologia',
-		year: 2023,
-		description:
-			'Repositório de desenvolvimento do ProtOn Odontologia, um sistema de recomendações de protocolos odontológicos em ReactJs, NodeJs e MongoDB Atlas',
-		topics: ['css3', 'html5', 'javascript', 'mongodb-atlas', 'nodejs', 'reactjs'],
-		img: '/imgs/capa_proton.png',
-		httpRepo: 'https://github.com/NikolasLouret/ProtOn-Odontologia',
-	},
-	{
-		id: 617218185,
-		name: 'todosimple-api',
-		year: 2023,
-		description:
-			'Aplicação de Spring Boot desenvolvida para fins de aprendizado do curso de RESTful API com Spring Boot do Lucas Ângelo (Eng. de Software PUC Minas Praça da Liberdade)',
-		topics: ['java'],
-		img: '/imgs/placeholder.png',
-		httpRepo: 'https://github.com/NikolasLouret/todosimple-api',
-	},
-	{
-		id: 645022704,
-		name: 'trabalho-caixeiro-viajente',
-		year: 2023,
-		description:
-			'Resolução do problema do Caixeiro Viajante em um grafo utilizando algoritmo de Foça Bruta e o algortimo Guloso',
-		topics: ['java'],
-		img: '/imgs/placeholder.png',
-		httpRepo: 'https://github.com/NikolasLouret/trabalho-caixeiro-viajente',
-	},
-]
+const data_mock: IProjectCardProps[] = mock
 
 const Projects = (prop: { id: string }) => {
 	const url_repos = 'https://api.github.com/users/nikolaslouret/repos'
@@ -72,7 +22,7 @@ const Projects = (prop: { id: string }) => {
 	const [page, setPage] = useState(0)
 
 	useEffect(() => {
-		// eslint-disable-next-line no-extra-semi
+		//eslint-disable-next-line no-extra-semi
 		;(async () => {
 			try {
 				const response = await fetch(url_repos)
@@ -82,7 +32,6 @@ const Projects = (prop: { id: string }) => {
 					const repos = (await getProjects(data)).filter(i => {
 						return i
 					}) as IProjectCardProps[]
-
 					setAllProjects(repos)
 					setProjects(repos.slice(page * 6, page * 6 + 6))
 				} else {
@@ -91,10 +40,10 @@ const Projects = (prop: { id: string }) => {
 				}
 				setPage(page + 1)
 			} catch (error) {
-				console.error(error)
 				setAllProjects(data_mock)
 			}
 		})()
+
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
@@ -109,7 +58,7 @@ const Projects = (prop: { id: string }) => {
 						const imgResp = await fetch(imgPath(contents_url, '/Divulgacao/Thumbnail'))
 						const img = await imgResp.json()
 
-						if (imgResp.status !== 200) imgUrl = '/imgs/placeholder.png'
+						if (imgResp.status !== 200) imgUrl = '/imgs/placeholder.webp'
 						else imgUrl = img[0].download_url
 					} catch (error) {
 						console.error(error)
@@ -171,7 +120,7 @@ const Projects = (prop: { id: string }) => {
 
 			{allProjects.length > page * 6 && (
 				<span className={styles.load_more} onClick={handleLoadMore}>
-					<FadeInSection key={'999'} direction='right'>
+					<FadeInSection key='999' direction='right'>
 						Carregar mais projetos
 					</FadeInSection>
 				</span>
