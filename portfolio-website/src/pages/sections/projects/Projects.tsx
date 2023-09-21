@@ -14,6 +14,7 @@ import FadeInSection from '../../../components/fadein-section/FadeInSection'
 import mock from '../../../components/mock/projects_mock.json'
 
 const data_mock: IProjectCardProps[] = mock
+const repoIds: number[] = [622914655, 691717085]
 
 const Projects = (prop: { id: string }) => {
 	const url_repos = 'https://api.github.com/users/nikolaslouret/repos'
@@ -37,10 +38,15 @@ const Projects = (prop: { id: string }) => {
 				} else {
 					setAllProjects(data_mock)
 					setProjects(data_mock.slice(page * 6, page * 6 + 6))
+					data_mock.forEach(repo => console.log(repoIds.includes(repo.id)))
 				}
+
 				setPage(page + 1)
 			} catch (error) {
 				setAllProjects(data_mock)
+				setProjects(data_mock.slice(page * 6, page * 6 + 6))
+
+				setPage(page + 1)
 			}
 		})()
 
@@ -50,7 +56,7 @@ const Projects = (prop: { id: string }) => {
 	const getProjects = (data: []) => {
 		return Promise.all(
 			data.map(async (repo: IRepoProps) => {
-				if (repo.id !== 622914655) {
+				if (!repoIds.includes(repo.id)) {
 					const { id, name, created_at, description, topics, contents_url, html_url } = repo
 					let imgUrl: string
 
@@ -94,7 +100,7 @@ const Projects = (prop: { id: string }) => {
 
 	return (
 		<section id={prop.id} className={`flex flex-column ${styles.body}`}>
-			<FadeInSection key={'12345'} direction='left'>
+			<FadeInSection key='12345' direction='left'>
 				<div className={styles.title}>
 					<span className={styles.subtitle}>Meus</span>
 					<h2 className={styles.about_me}>PROJETOS</h2>
