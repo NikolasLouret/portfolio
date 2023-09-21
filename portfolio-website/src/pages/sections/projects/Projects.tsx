@@ -38,7 +38,6 @@ const Projects = (prop: { id: string }) => {
 				} else {
 					setAllProjects(data_mock)
 					setProjects(data_mock.slice(page * 6, page * 6 + 6))
-					data_mock.forEach(repo => console.log(repoIds.includes(repo.id)))
 				}
 
 				setPage(page + 1)
