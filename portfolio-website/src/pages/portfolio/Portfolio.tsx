@@ -34,7 +34,11 @@ const Portfolio = () => {
 			</div>
 
 			<div className={styles.divImg}>
-				<img className={styles.me} src='/imgs/photo.avif' alt='Me' />
+				<img
+					className={styles.me}
+					src={theme == 'dark' ? '/imgs/photo_dark.avif' : '/imgs/photo.avif'}
+					alt='Me'
+				/>
 			</div>
 
 			<div className={`flex flex-column ${styles.container}`}>

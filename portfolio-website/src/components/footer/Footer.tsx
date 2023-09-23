@@ -21,7 +21,7 @@ const Footer = () => {
 
 					<p className={styles.description}>
 						Sinta-se à vontade para entrar em contato comigo a qualquer momento. Prefiro conversar por
-						whatsapp, principalmente porque a minha região não ter sinal de telefone, além do retorno ser
+						whatsapp, principalmente porque a minha região não tem sinal de telefone, além do retorno ser
 						mais rápido.
 					</p>
 
