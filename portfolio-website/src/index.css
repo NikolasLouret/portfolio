@@ -12,6 +12,10 @@
 	color-scheme: light only;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -37,6 +41,8 @@ body {
 	max-width: 120rem;
 	margin: 0 auto;
 	overflow-x: hidden;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 p {
