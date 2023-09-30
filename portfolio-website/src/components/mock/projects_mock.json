@@ -43,5 +43,14 @@
 		"topics": ["java"],
 		"img": "/imgs/placeholder.webp",
 		"httpRepo": "https://github.com/NikolasLouret/trabalho-caixeiro-viajente"
+	},
+	{
+		"id": 698429503,
+		"name": "Mone.das",
+		"year": 2023,
+		"description": "Projeto de desenvolvimento de um sistema de moedas estudantis",
+		"topics": ["nodejs", "mongodb", "reactjs", "express", "nodemailer"],
+		"img": "/imgs/capa_monedas.avif",
+		"httpRepo": "https://github.com/NikolasLouret/Mone.das"
 	}
 ]
