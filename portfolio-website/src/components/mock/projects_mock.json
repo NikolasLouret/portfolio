@@ -1,23 +1,5 @@
 [
 	{
-		"id": 407210763,
-		"name": "DIW-Trabalhos",
-		"year": 2021,
-		"description": "Repositório destinado à armazenar os projetos referentes ao trabalhos das disciplinas do curso de Eng. de Software da PUC Minas - Praça da Liberdade",
-		"topics": ["css3", "html5", "javascript"],
-		"img": "/imgs/placeholder.webp",
-		"httpRepo": "https://github.com/NikolasLouret/DIW-Trabalhos"
-	},
-	{
-		"id": 438043685,
-		"name": "Klug",
-		"year": 2021,
-		"description": "Aplicação desenvolvida para a disciplina de 'Trabalho Interdisciplinar: Aplicações Web', com propósito de estudo.",
-		"topics": [],
-		"img": "/imgs/capa_klug.webp",
-		"httpRepo": "https://github.com/NikolasLouret/Klug"
-	},
-	{
 		"id": 662229083,
 		"name": "ProtOn-Odontologia",
 		"year": 2023,
@@ -25,6 +7,42 @@
 		"topics": ["css3", "html5", "javascript", "mongodb-atlas", "nodejs", "reactjs"],
 		"img": "/imgs/capa_proton.webp",
 		"httpRepo": "https://github.com/NikolasLouret/ProtOn-Odontologia"
+	},
+	{
+		"id": 699939775,
+		"name": "Atelier-Picinin",
+		"year": 2022,
+		"description": "Projeto de site para impulsionar as vendas do atelier de doces Atelier Picinin, que foi afetada negativamente durante a pandemia. O atelier atualmente utiliza apenas redes sociais para gerenciar pedidos e interagir com clientes. Este site visa melhorar a eficiência das operações e expandir as vendas",
+		"topics": ["css3", "expressjs", "html5", "mongodb-atlas", "nodejs", "reactjs"],
+		"img": "/imgs/capa_atelier-picinin.avif",
+		"httpRepo": "https://github.com/NikolasLouret/Atelier-Picinin"
+	},
+	{
+		"id": 438043685,
+		"name": "Klug",
+		"year": 2021,
+		"description": "Aplicação desenvolvida para a disciplina de 'Trabalho Interdisciplinar: Aplicações Web', com propósito de estudo.",
+		"topics": ["expressjs", "figma", "mapbox-api", "miro", "mysql", "sequeliza"],
+		"img": "/imgs/capa_klug.webp",
+		"httpRepo": "https://github.com/NikolasLouret/Klug"
+	},
+	{
+		"id": 698429503,
+		"name": "Mone.das",
+		"year": 2023,
+		"description": "Projeto de desenvolvimento de um sistema de moedas estudantis",
+		"topics": ["nodejs", "mongodb", "reactjs", "express", "nodemailer"],
+		"img": "/imgs/capa_monedas.avif",
+		"httpRepo": "https://github.com/NikolasLouret/Mone.das"
+	},
+	{
+		"id": 407210763,
+		"name": "DIW-Trabalhos",
+		"year": 2021,
+		"description": "Repositório destinado à armazenar os projetos referentes ao trabalhos das disciplinas do curso de Eng. de Software da PUC Minas - Praça da Liberdade",
+		"topics": ["css3", "html5", "javascript"],
+		"img": "/imgs/placeholder.webp",
+		"httpRepo": "https://github.com/NikolasLouret/DIW-Trabalhos"
 	},
 	{
 		"id": 617218185,
@@ -43,23 +61,5 @@
 		"topics": ["java"],
 		"img": "/imgs/placeholder.webp",
 		"httpRepo": "https://github.com/NikolasLouret/trabalho-caixeiro-viajente"
-	},
-	{
-		"id": 698429503,
-		"name": "Mone.das",
-		"year": 2023,
-		"description": "Projeto de desenvolvimento de um sistema de moedas estudantis",
-		"topics": ["nodejs", "mongodb", "reactjs", "express", "nodemailer"],
-		"img": "/imgs/capa_monedas.avif",
-		"httpRepo": "https://github.com/NikolasLouret/Mone.das"
-	},
-	{
-		"id": 699939775,
-		"name": "Atelier-Picinin",
-		"year": 2022,
-		"description": "Projeto de site para impulsionar as vendas do atelier de doces Atelier Picinin, que foi afetada negativamente durante a pandemia. O atelier atualmente utiliza apenas redes sociais para gerenciar pedidos e interagir com clientes. Este site visa melhorar a eficiência das operações e expandir as vendas",
-		"topics": ["css3", "expressjs", "html5", "mongodb-atlas", "nodejs", "reactjs"],
-		"img": "/imgs/capa_atelier-picinin.avif",
-		"httpRepo": "https://github.com/NikolasLouret/Atelier-Picinin"
 	}
 ]
