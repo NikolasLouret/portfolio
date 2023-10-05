@@ -1,2 +1,2 @@
 # Portfolio
-Repositório destinado ao desenvolvimento do meu portifólio website
+Repositório destinado ao desenvolvimento do meu portfólio website
