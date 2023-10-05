@@ -125,7 +125,7 @@ const Projects = (prop: { id: string }) => {
 			{allProjects.length > page * 6 && (
 				<span className={styles.load_more} onClick={handleLoadMore}>
 					<FadeInSection key='999' direction='right'>
-						Carregar mais projetos
+						<span>Carregar mais projetos</span>
 					</FadeInSection>
 				</span>
 			)}

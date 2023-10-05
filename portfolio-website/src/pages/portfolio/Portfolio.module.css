@@ -30,6 +30,12 @@
 	-webkit-animation: loop 90s linear infinite;
 	-moz-animation: loop 90s linear infinite;
 	-o-animation: loop 90s linear infinite;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .container {
@@ -67,24 +73,24 @@
 		right: 10rem;
 	}
 	.me {
-		width: 40rem;
+		width: 35rem;
 	}
 }
 
 /* tablets */
-@media (max-width: 66em) {
+@media (max-width: 70em) {
 	.animated_text {
 		font-size: 23rem;
 		text-shadow: 20px 20px 60px #e2e2e2, -20px -20px 60px var(--white);
 	}
 
 	.divImg {
-		top: 10rem;
+		top: 15rem;
 		right: 3rem;
 	}
 
 	.me {
-		width: 40rem;
+		width: 30rem;
 	}
 
 	.container {
@@ -95,11 +101,11 @@
 /* phones */
 @media (max-width: 40rem) {
 	.divImg {
-		top: 5rem;
+		top: 7rem;
 		right: -5rem;
 	}
 	.me {
-		width: 27rem;
+		width: 25rem;
 	}
 
 	.animated_text {
@@ -113,6 +119,20 @@
 	.container {
 		padding: 0 2rem;
 		row-gap: 3rem;
+	}
+}
+
+/* Galaxy Fold */
+@media (max-width: 330px) {
+	.divImg {
+		top: 5rem;
+		right: -5rem;
+	}
+	.me {
+		width: 20rem;
+	}
+	.container {
+		padding: 0 0.7rem;
 	}
 }
 

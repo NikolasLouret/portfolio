@@ -80,6 +80,9 @@
 
 /* Galaxy Fold */
 @media (max-width: 330px) {
+	.presentation {
+		margin-top: -5rem;
+	}
 	.cargo {
 		font-size: 1.5rem;
 	}

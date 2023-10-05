@@ -138,9 +138,19 @@
 	}
 }
 
+/* Galaxy Fold */
+@media (max-width: 330px) {
+	.header {
+		padding: 1rem 0.7rem;
+	}
+}
+
 /* darkmode */
 .header.dark {
-	background-color: #1b1b1b;
+	background: rgba(0, 0, 0, 0.37);
+	backdrop-filter: blur(13.5px);
+	-webkit-backdrop-filter: blur(13.5px);
+	border-bottom: 0.1rem solid rgba(53, 53, 53, 0.63);
 }
 .header.dark .menu_list {
 	background-color: #1b1b1b;
@@ -152,7 +162,10 @@
 
 /* lightmode */
 .header.light {
-	background-color: var(--white);
+	background: rgba(255, 255, 255, 0.37);
+	backdrop-filter: blur(13.5px);
+	-webkit-backdrop-filter: blur(13.5px);
+	border-bottom: 0.1rem solid rgba(255, 255, 255, 0.39);
 }
 .header.light .menu_list {
 	background-color: var(--white);
