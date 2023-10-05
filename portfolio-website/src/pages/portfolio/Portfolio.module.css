@@ -44,11 +44,11 @@
 
 .divImg {
 	position: absolute;
-	top: 5rem;
+	top: 6rem;
 	right: 15rem;
 }
 .me {
-	width: 47rem;
+	width: 46rem;
 	object-fit: cover;
 }
 
