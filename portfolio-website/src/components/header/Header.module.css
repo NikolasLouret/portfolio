@@ -150,7 +150,7 @@
 	background: rgba(0, 0, 0, 0.37);
 	backdrop-filter: blur(13.5px);
 	-webkit-backdrop-filter: blur(13.5px);
-	border-bottom: 0.1rem solid rgba(53, 53, 53, 0.63);
+	border-bottom: 0.1rem solid rgba(37, 37, 37, 0.63);
 }
 .header.dark .menu_list {
 	background-color: #1b1b1b;
