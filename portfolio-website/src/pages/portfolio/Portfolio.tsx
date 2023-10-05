@@ -36,7 +36,7 @@ const Portfolio = () => {
 			<div className={styles.divImg}>
 				<img
 					className={styles.me}
-					src={theme == 'dark' ? '/imgs/photo_dark.avif' : '/imgs/photo_light.avif'}
+					src={theme == 'dark' ? '/imgs/photo_dark.webp' : '/imgs/photo_light.webp'}
 					alt='Me'
 				/>
 			</div>

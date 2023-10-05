@@ -66,7 +66,6 @@ const Projects = (prop: { id: string }) => {
 						if (imgResp.status !== 200) imgUrl = '/imgs/placeholder.webp'
 						else imgUrl = img[0].download_url
 					} catch (error) {
-						console.error(error)
 						imgUrl = '/imgs/placeholder.png'
 					}
 

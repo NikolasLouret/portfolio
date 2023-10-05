@@ -14,7 +14,7 @@
 		"year": 2022,
 		"description": "Projeto de site para impulsionar as vendas do atelier de doces Atelier Picinin, que foi afetada negativamente durante a pandemia. O atelier atualmente utiliza apenas redes sociais para gerenciar pedidos e interagir com clientes. Este site visa melhorar a eficiência das operações e expandir as vendas",
 		"topics": ["css3", "expressjs", "html5", "mongodb-atlas", "nodejs", "reactjs"],
-		"img": "/imgs/capa_atelier-picinin.avif",
+		"img": "/imgs/capa_atelier-picinin.webp",
 		"httpRepo": "https://github.com/NikolasLouret/Atelier-Picinin"
 	},
 	{
@@ -32,7 +32,7 @@
 		"year": 2023,
 		"description": "Projeto de desenvolvimento de um sistema de moedas estudantis",
 		"topics": ["nodejs", "mongodb", "reactjs", "express", "nodemailer"],
-		"img": "/imgs/capa_monedas.avif",
+		"img": "/imgs/capa_monedas.webp",
 		"httpRepo": "https://github.com/NikolasLouret/Mone.das"
 	},
 	{
