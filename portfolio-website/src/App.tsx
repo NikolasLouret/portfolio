@@ -6,9 +6,10 @@ import Portfolio from './pages/portfolio/Portfolio'
 
 //* Context
 import { ThemeContext } from './context/ThemeContext'
+import { CookieProvider } from './context/CookieContext'
 
 //* React
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
 	const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -18,17 +19,24 @@ function App() {
 		const browserDefault = isBrowserDefaultDark() ? 'dark' : 'light'
 		return localStorageTheme || browserDefault
 	}
-
 	const [theme, setTheme] = useState(getDefaultTheme())
 
+	useEffect(() => {
+		// Check for support.
+		if (!('indexedDB' in window)) {
+			console.log("This browser doesn't support IndexedDB.")
+			return
+		}
+	})
+
 	return (
-		<>
-			<ThemeContext.Provider value={{ theme, setTheme }}>
-				<div className={styles[theme]}>
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			<div className={styles[theme]}>
+				<CookieProvider>
 					<Portfolio />
-				</div>
-			</ThemeContext.Provider>
-		</>
+				</CookieProvider>
+			</div>
+		</ThemeContext.Provider>
 	)
 }
 

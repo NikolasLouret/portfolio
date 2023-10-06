@@ -2,7 +2,7 @@
 import styles from './Projects.module.css'
 
 //* React
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 
 //* Components
 import ProjectCard from '../../../components/projectCard/ProjectCard'
@@ -13,44 +13,89 @@ import { IRepoProps } from '../../../types/IRepoProps'
 import FadeInSection from '../../../components/fadein-section/FadeInSection'
 import mock from '../../../components/mock/projects_mock.json'
 
+//* Context
+import { CookieContext } from '../../../context/CookieContext'
+
+//* Axios
+import axios from 'axios'
+
 const data_mock: IProjectCardProps[] = mock
 const repoIds: number[] = [622914655, 691717085]
 
 const Projects = (prop: { id: string }) => {
-	const url_repos = 'https://api.github.com/users/nikolaslouret/repos'
+	const DB_NAME = 'projectsDB'
+	const COOKIE_NAME = 'loadProjects'
+	const EXPIRE_DAYS = 2
+	const URL = 'https://api.github.com/users/nikolaslouret/repos'
+	const OBJECT_NAMES = 'projects'
+
+	const { setCookie, cookieExists } = useContext(CookieContext)
+
 	const [projects, setProjects] = useState<IProjectCardProps[]>([])
 	const [allProjects, setAllProjects] = useState<IProjectCardProps[]>([])
 	const [page, setPage] = useState(0)
 
 	useEffect(() => {
-		//eslint-disable-next-line no-extra-semi
-		;(async () => {
-			try {
-				const response = await fetch(url_repos)
-				const data = await response.json()
+		const REQUEST = indexedDB.open(DB_NAME)
 
-				if (response.status === 200) {
-					const repos = (await getProjects(data)).filter(i => {
-						return i
-					}) as IProjectCardProps[]
-					setAllProjects(repos)
-					setProjects(repos.slice(page * 6, page * 6 + 6))
+		REQUEST.onerror = () => {
+			return
+		}
+
+		REQUEST.onupgradeneeded = () => {
+			const DB = REQUEST.result
+
+			console.log('Criando Tabela ' + OBJECT_NAMES)
+			DB.createObjectStore(OBJECT_NAMES, { keyPath: 'id' })
+		}
+
+		REQUEST.onsuccess = () => {
+			const DB = REQUEST.result
+
+			const TRANSACTION = DB.transaction(OBJECT_NAMES, 'readonly')
+			const DATA = TRANSACTION.objectStore(OBJECT_NAMES).getAll()
+
+			DATA.onsuccess = () => {
+				if (!cookieExists(COOKIE_NAME)) {
+					setup(DB)
 				} else {
-					setAllProjects(data_mock)
-					setProjects(data_mock.slice(page * 6, page * 6 + 6))
+					setData(DATA.result)
 				}
-
-				setPage(page + 1)
-			} catch (error) {
-				setAllProjects(data_mock)
-				setProjects(data_mock.slice(page * 6, page * 6 + 6))
-
-				setPage(page + 1)
 			}
-		})()
+		}
 
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
+
+	const setup = async (DB: IDBDatabase) => {
+		try {
+			const RESPONSE = await axios.get(URL)
+
+			if (RESPONSE.status === 200) {
+				const REPOS = (await getProjects(RESPONSE.data)).filter(i => {
+					return i
+				}) as IProjectCardProps[]
+
+				const TRANSACTION = DB.transaction(OBJECT_NAMES, 'readwrite')
+				const objectRepos = TRANSACTION.objectStore(OBJECT_NAMES)
+
+				objectRepos.clear()
+
+				REPOS.forEach(repo => {
+					objectRepos.add(repo)
+				})
+
+				TRANSACTION.oncomplete = () => {
+					setCookie(COOKIE_NAME, 'false', EXPIRE_DAYS)
+					setData(REPOS)
+				}
+			} else {
+				setMock()
+			}
+		} catch (error) {
+			setMock()
+		}
+	}
 
 	const getProjects = (data: []) => {
 		return Promise.all(
@@ -60,13 +105,12 @@ const Projects = (prop: { id: string }) => {
 					let imgUrl: string
 
 					try {
-						const imgResp = await fetch(imgPath(contents_url, '/Divulgacao/Thumbnail'))
-						const img = await imgResp.json()
+						const response = await axios.get(imgPath(contents_url, '/Divulgacao/Thumbnail'))
 
-						if (imgResp.status !== 200) imgUrl = '/imgs/placeholder.webp'
-						else imgUrl = img[0].download_url
+						if (response.status !== 200) imgUrl = '/imgs/placeholder.webp'
+						else imgUrl = response.data[0].download_url
 					} catch (error) {
-						imgUrl = '/imgs/placeholder.png'
+						imgUrl = '/imgs/placeholder.webp'
 					}
 
 					const projectData: IProjectCardProps = {
@@ -83,6 +127,20 @@ const Projects = (prop: { id: string }) => {
 				}
 			}),
 		)
+	}
+
+	const setMock = () => {
+		setAllProjects(data_mock)
+		setProjects(data_mock.slice(page * 6, page * 6 + 6))
+
+		setPage(page + 1)
+	}
+
+	const setData = (data: IProjectCardProps[]) => {
+		setAllProjects(data)
+		setProjects(data.slice(page * 6, page * 6 + 6))
+
+		setPage(page + 1)
 	}
 
 	const imgPath = (contents_url: string, path: string) => {
