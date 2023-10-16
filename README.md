@@ -2,6 +2,8 @@
 
 Bem-vindo ao meu repositório pessoal, onde compartilho meu portfólio desenvolvido em React com TypeScript, hospedado na plataforma [Railway](https://railway.app). Você pode acessá-lo em [www.nikolaslouret.com](https://www.nikolaslouret.com).
 
+https://github.com/NikolasLouret/portfolio/assets/77488551/255fe001-1f23-41a9-a04b-716ee2938a1b
+
 ## Visão Geral
 
 Meu portfólio pessoal é um espaço onde apresento minha jornada como desenvolvedor, compartilho projetos, tecnologias que conheço e um pouco sobre mim. Ele foi desenvolvido usando tecnologias modernas e está hospedado na [Railway](https://railway.app) para garantir alta disponibilidade e desempenho.
