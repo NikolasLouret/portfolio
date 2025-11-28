@@ -15,27 +15,21 @@ const AboutMe = (prop: { id: string }) => {
 			<div className={`flex flex-column ${styles.description}`}>
 				<FadeInSection direction='up'>
 					<p>
-						Sou estudante de Engenharia de Software na PUC Minas, atualmente residindo em Contagem, MG.
-						Minha paixão pela programação me levou a desenvolver habilidades sólidas em desenvolvimento Full
-						Stack e a cultivar pensamento lógico. Meu objetivo profissional é mergulhar em projetos de
-						desenvolvimento Full Stack/Front End, onde posso continuar aprimorando minhas capacidades e, ao
-						mesmo tempo, fazer uma contribuição valiosa para a equipe e a empresa.
+						Sou Engenheiro de Software formado pela PUC Minas, com experiência em desenvolvimento Full-Stack e forte capacidade de raciocínio lógico. Busco atuar em projetos desafiadores de desenvolvimento, contribuindo com soluções eficientes, código de qualidade e foco em resultados. Meu objetivo é crescer profissionalmente enquanto agrego valor para a empresa, colaborando ativamente com a equipe e participando da construção de produtos robustos e escaláveis.
 					</p>
 				</FadeInSection>
 				<FadeInSection direction='up'>
 					<p>
 						Minha jornada até aqui tem sido repleta de experiências enriquecedoras. Tenho experiência
-						prática com várias tecnologias, incluindo as linguagens Java e JavaScript. Participei do
-						desenvolvimento de projetos Full Stack, utilizando ferramentas como ReactJs, NodeJs, Express,
-						Sequelize, Mongoose, CSS e HTML. Além disso, trabalhei com modelagem de bancos de dados tanto
-						relacionais, usando MySQL e MS SQLServer, quanto não-relacionais, na nuvem, com MongoDB Atlas.
+						prática com várias tecnologias, incluindo as linguagens Java e TypeScript. Participei do
+						desenvolvimento de projetos Full Stack, utilizando ferramentas como ReactJs, NextJs, NestJs e AngularJs.
+						Além disso, trabalhei com modelagem de bancos de dados tanto
+						relacionais, usando PostgreSQL e MS SQLServer, quanto não-relacionais, na nuvem, com MongoDB Atlas.
 					</p>
 				</FadeInSection>
 				<FadeInSection direction='up'>
 					<p>
-						Tenho grandes aspirações para o futuro e desejo expandir meus conhecimentos para o campo das
-						aplicações móveis. Estou ansioso para explorar o desenvolvimento mobile com ReactJs Native e
-						Flutter, a fim de ampliar ainda mais meu conjunto de habilidades.
+						Tenho grandes aspirações para o futuro e busco expandir meus conhecimentos em desenvolvimento de aplicações móveis, além de aprimorar minhas habilidades em aplicações web e segurança de software.
 					</p>
 				</FadeInSection>
 			</div>

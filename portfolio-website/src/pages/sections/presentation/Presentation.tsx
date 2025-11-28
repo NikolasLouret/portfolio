@@ -30,9 +30,7 @@ const Presentation = () => {
 					</div>
 
 					<p className={styles.description}>
-						Sou estudante de Engenharia de Software e, nos últimos 3 anos, desenvolvi projetos próprios e
-						para clientes reais para contribuir com conhecimento profissional e pessoal, assim como atingir
-						a satisfação do cliente.
+						Sou Engenheiro de Software e desenvolvi projetos próprios e para clientes reais, sempre com foco em aprimorar minhas habilidades, entregar soluções de qualidade e garantir a satisfação do cliente.
 					</p>
 
 					<a href='#projects'>
